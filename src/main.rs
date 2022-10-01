@@ -34,4 +34,39 @@ fn main() {
     //let remainder = a % b;
     //println!("{}", remainder);
 
+   
+    //let Tup = (500, "hi", true);
+    //println!("{}", Tup.2);
+
+    //let (x, y, z) = Tup;
+    //println!("{}", x);
+    //println!("{}", y);
+    //println!("{}", z);
+
+    //let array = [1, 2, 3];
+    //println!("{}", array[0]);
+
+    //let mut array2: [i32; 3] = [4,5,6];
+    //println!("{}", array2[0]);
+    //array2[0] = 10;
+    //println!("{}", array2[0]);
+
+    let mut nums = vec![1,2,3];
+
+    nums.push(4);
+    println!("{:?}", nums);
+    
+    nums.pop();
+    println!("{:?}", nums);
+
+    let mut vec = Vec::new();
+    vec.push("Help");
+    vec.push("me");
+    vec.push("now");
+    println!("{:?}", vec);
+    vec.pop();
+    println!("{:?}", vec);
+
+    vec.reverse();
+    println!("{:?}", vec);
 }
