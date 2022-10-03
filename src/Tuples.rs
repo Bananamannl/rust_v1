@@ -1,4 +1,7 @@
 fn main(){
-    let Tup = (500, "hi", True);
-    println!("{}", Tup.0);
+   print_phrase();
+}
+
+fn print_phase(){
+    println!("Hello from the function!")
 }
