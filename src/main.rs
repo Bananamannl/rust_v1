@@ -110,4 +110,6 @@ fn main() {
     //let strtest1 = "banana".to_string();
     //println!("{} and {}", aaaah, strtest1);
 
+    //let rust = "\x52\x75\x73\x74";
+    //println!("{}", rust);
 }
