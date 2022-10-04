@@ -1,6 +1,7 @@
 fn main(){
 //    print_phrase("Print my argument");
-println!("{}", gcd(10, 20));
+      println!("{}", gcd(10, 20));
+      println!("{}", multiple_return_values(false))
 }
 
 // fn print_phrase(phrase: &str){
@@ -17,4 +18,12 @@ fn gcd(mut a: u64, mut b: u64) -> u64 {
         a = a % b;
     }
     b
+}
+
+fn multiple_return_values(flag: bool) -> bool {
+    if flag == true {
+        true
+    } else {
+        false
+    }
 }
