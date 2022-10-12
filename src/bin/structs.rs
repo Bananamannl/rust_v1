@@ -25,7 +25,16 @@
 //     }
 // }
 
+// struct MyString<'a> {
+//     text: &'a str
+// }
+
 fn main() {
+
+
+    // let str1 = String::from("This is my string");
+    // let x = MyString{text: str1.as_str()};
+    // let s: &'static str = "I have a static life time!";
     // let user1 = User{active: true, username: String::from("Merijn"), sign_in_count: 0};
     // println!("{}", user1.username);
 
@@ -41,13 +50,13 @@ fn main() {
     // sq.change_width(7);
     // println!("the new width = {}", sq.whats_my_width());
 
-    let r;
+    // let r;
 
-    {
-        let x = 5;
-        r = x;
-    }
-    println!("{}", r); //'a
+    // {
+    //     let x = 5;
+    //     r = x;
+    // }
+    // println!("{}", r); //'a
 
     // &i32
     // &'a i32
@@ -55,9 +64,9 @@ fn main() {
     
 }
 
-fn example<'a, 'b>(x: &'a mut str, y: &'b mut str) -> &'a str {
-    x
-}
+// fn example<'a, 'b>(x: &'a mut str, y: &'b mut str) -> &'a str {
+//     x
+// }
 
 
 // fn build_user(username: String) -> User {
