@@ -6,10 +6,5 @@ fn main() {
 }
 
 fn check_val(val: &Vec<i32>) -> bool{
-    if val[0] == 1 {
-      return true;  
-    } else {
-        return false;
-    }
-    
+     val[0] == 1 
 }

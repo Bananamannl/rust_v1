@@ -42,7 +42,7 @@ fn main() {
     // println!("{}", user2.username);
 
     // let cords = Coordinates(1,2,3);
-    // 1..5, .. is a Range {start 1, end: 5}
+    // // 1..5, .. is a Range {start 1, end: 5}
 
     // let mut sq = Square {width: 5, hight: 5};
     // println!("the area of the square = {}", sq.area());
@@ -56,7 +56,7 @@ fn main() {
     //     let x = 5;
     //     r = x;
     // }
-    // println!("{}", r); //'a
+    // println!("{}", x); //'a
 
     // &i32
     // &'a i32
