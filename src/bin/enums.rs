@@ -48,12 +48,32 @@ fn main () {
     println!("{:?}", five);
     println!("{:?}", six);
     println!("{:?}", none);
+
+    what_pet("Dog");
+    what_pet("Cat");
+    what_pet("Fish");
+    what_pet("Cow");
 }
 
 fn devide_1_by_x(x: Option<f64>) -> Option<Result<f64, &'static str>>{
     match x {
+        Some(i) => {
+            Some(if i != 0.0 {
+                Ok(1.0 / i)
+            } else {
+                Err("Cannot divide by 0")
+            })
+        },
+
         None => None,
-        Some(0.0) => Some(Err("Cannot divide by 0")),
-        Some(i) => Some(Ok(1.0 / i)),
+    }
+}
+
+fn what_pet(input: &str) {
+    match input {
+        "Dog" => println!("I have a dog"),
+        "Fish" => println!("I have a fish"),
+        "Cat" => println!("I have a cat"),
+        _ => println!("I have no clue what pet you have"),
     }
 }

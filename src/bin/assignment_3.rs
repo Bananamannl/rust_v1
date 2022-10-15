@@ -19,8 +19,8 @@ impl Car {
 fn main() {
     let mut car = Car{mpg: 0, color: "null".to_owned(), top_speed: 0};
     println!("The basic car: is mpg = {}, color = {}, top speed = {}", car.mpg, car.color, car.top_speed);
-    car.set_mpg(7);
-    car.set_color(String::from("Blue"));
-    car.set_top_speed(60);
+    car.set_mpg(200);
+    car.set_color(String::from("Red"));
+    car.set_top_speed(80);
     println!("The new car is: mpg = {}, color = {}, top speed = {}", car.mpg, car.color, car.top_speed)
 }
