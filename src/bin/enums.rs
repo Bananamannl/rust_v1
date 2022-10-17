@@ -53,6 +53,43 @@ fn main () {
     what_pet("Cat");
     what_pet("Fish");
     what_pet("Cow");
+
+    let dog2 = Some(Pet::Dog);
+    if let Some(Pet::Dog) = dog2 {
+        println!("Your pet is a dog!")
+    } else {
+        println!("You pet is not a dog!")
+    }
+
+    let mut stack = Vec::new();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    while let Some(top) = stack.pop() {
+        println!("{}", top)
+    }
+
+    // let x = 1;
+    // match x {
+    //     1 | 2 => println!("one or two"),
+    //     _ => println!("not one or two"),
+    // }
+
+    let x = 5;
+    match x {
+        1..=5 => println!("matches"),
+        _ => println!("not matching")
+    }
+
+    let x = Some(5);
+    let y = 5;
+    match x {
+        Some(10) => println!("10"),
+        Some(x) if x == y => println!("matches!"),
+        _ => println!("default")
+    }
+    
 }
 
 fn devide_1_by_x(x: Option<f64>) -> Option<Result<f64, &'static str>>{
