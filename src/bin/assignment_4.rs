@@ -7,19 +7,20 @@ enum Shape {
 }
 
 impl Shape {
-    fn corners(self) -> i32 {
+    fn corners(self) -> Result<i32, String> {
         match self {
-            Shape::Triangle => 3,
-            Shape::Square => 4,
-            Shape::Pentagon => 5,
-            Shape::Octagon => 8,
+            Shape::Triangle => Ok(3),
+            Shape::Square => Ok(4),
+            Shape::Pentagon => Err("This is clasified by the united states government".to_owned()),
+            Shape::Octagon => Ok(8),
         }
     }
 }
 
 fn main() {
-    println!("{}", Shape::Triangle.corners());
-    println!("{}", Shape::Square.corners());
-    println!("{}", Shape::Pentagon.corners());
-    println!("{}", Shape::Octagon.corners())
+    let x = Shape::Pentagon.corners();
+    match x {
+        Ok(i) => println!("The shape has this many corners: {}", i),
+        Err(i) => println!("The pentagon has this many corners: {}", i),
+    }
 }
