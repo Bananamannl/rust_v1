@@ -4,6 +4,7 @@ trait SetVehicle {
     fn set_top_speed(&mut self, _new_top_speed: u32) {}
 }
 
+#[derive(Debug)]
 struct Car {
     mpg: u32,
     color: String,
@@ -22,6 +23,7 @@ impl SetVehicle for Car {
     }
 }
 
+#[derive(Debug)]
 struct Motorcycle {
     mpg: u32,
     color: String,
@@ -40,13 +42,17 @@ impl SetVehicle for Motorcycle {
     }
 }
 
+fn print<T: std::fmt::Debug>(value: T) {
+    println!("{:?}", value)
+}
+
 fn main() {
     let mut car = Car{mpg: 0, color: "null".to_owned(), top_speed: 0};
     println!("The base mpg is {}, the base color is {} and the base top speed is {}", car.mpg, car.color, car.top_speed);
     car.set_mpg(80);
     car.set_color("Red".to_owned());
     car.set_top_speed(150);
-    println!("The mpg is {}, the color is {} and the top speed is {}", car.mpg, car.color, car.top_speed);
+    println!("{:?}", car);
     println!();
 
     let mut motorcycle = Motorcycle{mpg: 0, color: "null".to_owned(), top_speed: 0};
@@ -54,5 +60,10 @@ fn main() {
     motorcycle.set_mpg(100);
     motorcycle.set_color("Green".to_owned());
     motorcycle.set_top_speed(300);
-    println!("The mpg is {}, the color is {} and the top speed is {}", motorcycle.mpg, motorcycle.color, motorcycle.top_speed)
+    println!("{:?}", motorcycle);
+
+    print(vec![1,2,3]);
+    print("String");
+    print(String::from("String number 2"));
+    print(10);
 }
