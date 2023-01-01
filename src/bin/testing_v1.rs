@@ -42,6 +42,7 @@ fn main (){
         "-" => x - y,
         "*" => x * y,
         "/" => x / y,
+        "^" => power(x, y),
         _ => {
             eprintln!("Wrong operation.");
             std::process::exit(1)
@@ -50,3 +51,15 @@ fn main (){
 
     println!("The answer is: {answer}");
 }
+
+fn power (x: i32, mut y: i32) -> i32 {
+    let mut tally = x;
+    if y == 0 {
+        tally = 1
+    }
+    while y > 1 {
+        tally = tally * x;
+        y = y - 1;
+    } tally
+}
+
